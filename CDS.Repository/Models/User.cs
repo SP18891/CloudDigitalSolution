@@ -11,7 +11,13 @@ public class User
     public string UserName { get; set; }
 
     [Required]
-    public string Name { get; set; }
+    public string FirstName { get; set; }
+
+    [Required]
+    public string LastName { get; set; }
+
+    [Required]
+    public string Gender { get; set; }
 
     [EmailAddress]
     public string EmailAddress { get; set; }

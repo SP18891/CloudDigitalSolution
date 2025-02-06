@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudDigitalSolution", "CloudDigitalSolution\CloudDigitalSolution.csproj", "{53BA143C-A01A-4747-AEA9-C14DEE99B0FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudDigitalSolution", "CloudDigitalSolution\CloudDigitalSolution.csproj", "{53BA143C-A01A-4747-AEA9-C14DEE99B0FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDS.Repository", "CDS.Repository\CDS.Repository.csproj", "{7271EEE9-BB1C-496B-8199-9F0482CCA4EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDS.Repository", "CDS.Repository\CDS.Repository.csproj", "{7271EEE9-BB1C-496B-8199-9F0482CCA4EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDS.Services", "CDS.Services\CDS.Services.csproj", "{9D3B7703-B2C0-4576-93C1-71B38E198D20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7271EEE9-BB1C-496B-8199-9F0482CCA4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7271EEE9-BB1C-496B-8199-9F0482CCA4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7271EEE9-BB1C-496B-8199-9F0482CCA4EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D3B7703-B2C0-4576-93C1-71B38E198D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3B7703-B2C0-4576-93C1-71B38E198D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3B7703-B2C0-4576-93C1-71B38E198D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3B7703-B2C0-4576-93C1-71B38E198D20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,13 +36,13 @@ namespace CloudDigitalSolution
 
             CloudDigitalSolution.App app = new CloudDigitalSolution.App();
             app.InitializeComponent();
-            using (var scope = host.Services.CreateScope())
-            {
-                using (var dbContext = scope.ServiceProvider.GetRequiredService<CDSContext>())
-                {
-                    dbContext.Database.EnsureCreated();
-                }
-            }
+            //using (var scope = host.Services.CreateScope())
+            //{
+            //    using (var dbContext = scope.ServiceProvider.GetRequiredService<CDSContext>())
+            //    {
+            //        dbContext.Database.EnsureCreated();
+            //    }
+            //}
 
             app.Run();
         }

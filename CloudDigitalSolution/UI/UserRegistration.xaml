@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CloudDigitalSolution.UI"
+        xmlns:components="clr-namespace:CloudDigitalSolution.Components"
         mc:Ignorable="d"
         Title="User Registration" Height="450" Width="800">
-    <Grid Margin="0,0,-26,-6">
+    <Grid Margin="0,0,-51,-28">
         <Grid.RowDefinitions>
             <RowDefinition Height="47*" />
             <RowDefinition Height="393*" />
@@ -20,29 +21,27 @@
             <ColumnDefinition Width="487*" />
         </Grid.ColumnDefinitions>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="34,34,0,0" VerticalAlignment="Top" Width="93" Height="37" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Column="1" />
-        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Margin="83,36,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.RowSpan="2" />
+        <TextBox x:Name="FirstName" Text="{Binding FirstName}" HorizontalAlignment="Left" Margin="83,36,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.RowSpan="2" />
         <Label Content="User Name" HorizontalAlignment="Left" Margin="34,45,0,0" VerticalAlignment="Top" Width="93" Height="37" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="1" />
-        <TextBox x:Name="UserName" HorizontalAlignment="Left" Margin="83,47,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" />
+        <TextBox x:Name="UserName" Text="{Binding UserName}" HorizontalAlignment="Left" Margin="83,47,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" />
         <Label Content="Email Address" HorizontalAlignment="Left" Margin="34,111,0,0" VerticalAlignment="Top" Width="127" Height="37" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="1" />
-        <TextBox x:Name="EmailAddress" HorizontalAlignment="Left" Margin="83,113,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" />
+        <TextBox x:Name="EmailAddress" Text="{Binding EmailAddress}" HorizontalAlignment="Left" Margin="83,113,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" />
         <Label Content="Password" HorizontalAlignment="Left" Margin="34,170,0,0" VerticalAlignment="Top" Width="127" Height="37" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="1" />
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Margin="83,171,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" />
+        <PasswordBox x:Name="Password"  HorizontalAlignment="Left" Margin="83,171,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" />
         <Label Content="Last Name" HorizontalAlignment="Left" Margin="87,37,0,0" VerticalAlignment="Top" Width="93" Height="37" FontSize="16" FontWeight="Bold" Grid.Column="5" Grid.RowSpan="2" />
-        <TextBox x:Name="LastName" HorizontalAlignment="Left" Margin="240,39,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.Column="5" Grid.RowSpan="2">
-            <TextBox.BindingGroup>
-                <BindingGroup />
-            </TextBox.BindingGroup>
-        </TextBox>
+        <TextBox x:Name="LastName" Text="{Binding LastName}" HorizontalAlignment="Left" Margin="240,39,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.Column="5" Grid.RowSpan="2" />
         <Label Content="Gender" HorizontalAlignment="Left" Margin="87,48,0,0" VerticalAlignment="Top" Width="93" Height="37" FontSize="16" FontWeight="Bold" Grid.Column="5" Grid.Row="1" />
-        <Label Content="Mobile Number" HorizontalAlignment="Left" Margin="87,114,0,0" VerticalAlignment="Top" Width="132" Height="37" FontSize="16" FontWeight="Bold" Grid.Column="5" Grid.Row="1" />
-        <TextBox x:Name="MobileNumber" HorizontalAlignment="Left" Margin="240,116,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.Column="5" Grid.Row="1" />
-        <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="87,173,0,0" VerticalAlignment="Top" Width="148" Height="37" FontSize="16" FontWeight="Bold" Grid.Column="5" Grid.Row="1" />
-        <TextBox x:Name="ConfirmPassword" HorizontalAlignment="Left" Margin="240,174,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.Column="5" Grid.Row="1" />
-        <ComboBox x:Name="Gender" HorizontalAlignment="Left" Margin="240,48,0,0" VerticalAlignment="Top" Width="168" Height="35" Opacity="0.7" Grid.Column="5" VerticalContentAlignment="Center" FontSize="16" Grid.Row="1">
+        <ComboBox x:Name="Gender" Text="{Binding Gender}" HorizontalAlignment="Left" Margin="240,48,0,0" VerticalAlignment="Top" Width="168" Height="35" Opacity="0.7" Grid.Column="5" VerticalContentAlignment="Center" FontSize="16" Grid.Row="1">
             <ComboBoxItem Content="Male" />
             <ComboBoxItem Content="Female" />
         </ComboBox>
-        <Button Content="Register" HorizontalAlignment="Left" Margin="72,273,0,0" VerticalAlignment="Top" Height="40" Width="179" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" />
-        <Button Content="Reset" HorizontalAlignment="Left" Margin="87,273,0,0" VerticalAlignment="Top" Height="40" Width="179" FontSize="16" FontWeight="Bold" Click="Button_Click" Grid.Column="5" Grid.Row="1" />
+        <Label Content="Mobile Number" HorizontalAlignment="Left" Margin="87,114,0,0" VerticalAlignment="Top" Width="132" Height="37" FontSize="16" FontWeight="Bold" Grid.Column="5" Grid.Row="1" />
+        <TextBox x:Name="MobileNumber" Text="{Binding MobileNumber}" HorizontalAlignment="Left" Margin="240,116,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" SelectionOpacity="7" VerticalContentAlignment="Center" Grid.Column="5" Grid.Row="1" />
+        <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="87,173,0,0" VerticalAlignment="Top" Width="148" Height="37" FontSize="16" FontWeight="Bold" Grid.Column="5" Grid.Row="1" />
+        <PasswordBox x:Name="ConfirmPassword"  HorizontalAlignment="Left" Margin="240,174,0,0" VerticalAlignment="Top" Width="168" Height="36" FontSize="16" VerticalContentAlignment="Center" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3" />
+        <Button Content="Register" HorizontalAlignment="Left" Margin="72,273,0,0" VerticalAlignment="Top" Height="40" Width="179" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" Click="Register" />
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="87,273,0,0" VerticalAlignment="Top" Height="40" Width="179" FontSize="16" FontWeight="Bold" Grid.Column="5" Grid.Row="1" Click="Reset" />
+        <Button Grid.Column="3" Content="Button" HorizontalAlignment="Left" Margin="90,329,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="142" Grid.ColumnSpan="2" />
+        <Label Grid.Column="1" Content="Test Label" HorizontalAlignment="Left" Margin="10,235,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="113" Grid.ColumnSpan="3" />
     </Grid>
 </Window>
